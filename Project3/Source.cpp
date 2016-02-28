@@ -26,19 +26,19 @@ public:
 		den;
 	}
 	                      
-	Fraction add(Fraction p)             //addition
+	Fraction add(Fraction part)             //addition
 	{
 		Fraction myFrac;
-		myFrac.num = num*p.den + den*p.num;
-		myFrac.den = den*p.den;
+		myFrac.num = num*part.den + den*part.num;
+		myFrac.den = den*part.den;
 		return myFrac;
 	}
 
-	Fraction subtract(Fraction p)
+	Fraction subtract(Fraction part)    //subtaction
 	{
 		Fraction myFrac;
-		myFrac.num = num*p.den - den*p.num;
-		myFrac.den = den*p.den;
+		myFrac.num = num*part.den - den*part.num;  // 
+		myFrac.den = den*part.den;
 		return myFrac;
 	}
 
@@ -72,7 +72,7 @@ int main()
 {
 	int a, b, c, d;
 	Fraction part1, part2;
-	Fraction myFrac;
+	Fraction myFrac;      
 
 	cout << "Do arithemitic operation on two fractions" << endl;
 	cout << "Enter first fraction : (a/b)" << endl;
