@@ -10,7 +10,7 @@ private :
 	int den;
 
 public:
-	Fraction()   // contructor
+	Fraction()                          // contructor
 	{
 		num = 0;
 	    den = 1;
