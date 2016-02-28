@@ -106,9 +106,6 @@ int main()
 	myFrac.print();
 
 	
-	
-
-	system("pause");
 	return 0;
 }
 //Thalente Ngcobo
