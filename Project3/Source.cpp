@@ -61,10 +61,11 @@ public:
 
 	void print()       // void method for printing
 	{
+
 		cout << num << "/" << den << endl;
 	}
 
-	~Fraction() {                         //deconructor
+	~Fraction() {                         //deconstructor
 	}
 };
 
@@ -90,9 +91,9 @@ int main()
 	//display all the achieve results
 	cout << "=======================================================================" << endl << endl << "Resluts" << endl<<endl;
 	
-	result = part1 + part2;        
+	myFrac = part1 + part2;        
 	cout << "Addition :   ";
-	result.print();
+	myFrac.print();
 
 	myFrac = part1 - part2;
 	cout << "Subtrction :  ";
