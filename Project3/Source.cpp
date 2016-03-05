@@ -35,7 +35,7 @@ public:
 
 	}
 
-	Fraction subtract(Fraction part)    //subtaction
+	Fraction& operator-(const Fraction& part)   //subtaction
 	{
 		Fraction myFrac;
 		myFrac.num = num*part.den - den*part.num;  
@@ -43,7 +43,7 @@ public:
 		return myFrac;
 	}
 
-	Fraction multiply(Fraction p)
+	Fraction& operator*(const Fraction& p)
 	{
 		Fraction myFrac;
 		myFrac.num = num*p.num;
@@ -51,7 +51,7 @@ public:
 		return myFrac;
 	}
 
-	Fraction didvide(Fraction p)
+	Fraction& operator/(const Fraction& p)    //Division overloaded
 	{
 		Fraction myFrac;
 		myFrac.num = num*p.den;
@@ -94,15 +94,15 @@ int main()
 	cout << "Addition :   ";
 	result.print();
 
-	myFrac = part1.subtract(part2);
+	myFrac = part1 - part2;
 	cout << "Subtrction :  ";
 	myFrac.print();
 
-	myFrac = part1.multiply(part2);
+	myFrac = part1*part2;
 	cout << "Multiplication : ";
 	myFrac.print();
 
-	myFrac = part1.didvide(part2);
+	myFrac = part1/part2;
 	cout << "Division :    ";
 	myFrac.print();
 
