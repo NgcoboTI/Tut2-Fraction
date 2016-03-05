@@ -26,18 +26,19 @@ public:
 		den;
 	}
 	                      
-	Fraction add(Fraction part)             //addition
+	Fraction& operator+(const Fraction& f)
 	{
 		Fraction myFrac;
-		myFrac.num = num*part.den + den*part.num;
-		myFrac.den = den*part.den;
+		myFrac.num = num*f.den + den*f.num;
+		myFrac.den = den*f.den;
 		return myFrac;
+
 	}
 
 	Fraction subtract(Fraction part)    //subtaction
 	{
 		Fraction myFrac;
-		myFrac.num = num*part.den - den*part.num;  // 
+		myFrac.num = num*part.den - den*part.num;  
 		myFrac.den = den*part.den;
 		return myFrac;
 	}
@@ -72,7 +73,7 @@ int main()
 {
 	int a, b, c, d;
 	Fraction part1, part2;
-	Fraction myFrac;      
+	Fraction myFrac, result;
 
 	cout << "Do arithemitic operation on two fractions" << endl;
 	cout << "Enter first fraction : (a/b)" << endl;
@@ -89,9 +90,9 @@ int main()
 	//display all the achieve results
 	cout << "=======================================================================" << endl << endl << "Resluts" << endl<<endl;
 	
-	myFrac = part1.add(part2);        
+	result = part1 + part2;        
 	cout << "Addition :   ";
-	myFrac.print();
+	result.print();
 
 	myFrac = part1.subtract(part2);
 	cout << "Subtrction :  ";
@@ -105,7 +106,7 @@ int main()
 	cout << "Division :    ";
 	myFrac.print();
 
-	
+	system("pause");
 	return 0;
 }
 //T.I
